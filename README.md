@@ -1,10 +1,32 @@
 # 🧪 Chem Agent Lab
 
+🚀 *GSoC 2026 Proposal Project | MoFA Org*
+
+---
+
 ## 📌 Overview
 
 Chem Agent Lab is a multi-agent AI system designed to simulate, explain, and guide interactive chemistry experiments. The project combines chemical reaction simulation with intelligent tutoring using a collaborative network of specialized AI agents.
 
 This system is developed as part of Google Summer of Code (GSoC) under MoFA Org, focusing on building scalable and modular AI agent architectures for real-world educational applications.
+
+---
+
+## ❗ Problem Statement
+
+Traditional virtual labs lack:
+
+* Real-time intelligent guidance
+* Clear explanation of *why* reactions occur
+* Adaptive learning based on student performance
+
+This results in passive learning instead of true conceptual understanding.
+
+---
+
+## 💡 Solution
+
+Chem Agent Lab introduces a **multi-agent AI architecture** where specialized agents collaborate to simulate reactions, explain concepts, and guide users interactively.
 
 ---
 
@@ -45,6 +67,23 @@ The platform is built using multiple specialized AI agents:
 
 * Tracks user performance
 * Adapts difficulty based on learning progress
+
+---
+
+## 🔗 Agent Communication Flow
+
+```
+User → API → Orchestrator → Agents
+                         ├── Reaction Agent
+                         ├── Safety Agent
+                         ├── Tutor Agent
+                         ├── Hint Agent
+                         └── Progress Agent
+```
+
+* The **Orchestrator** manages communication between agents
+* Agents interact via structured messages/API calls
+* Ensures modular and scalable architecture
 
 ---
 
@@ -89,7 +128,7 @@ The platform is built using multiple specialized AI agents:
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/chem-agent-lab.git
+git clone https: https://github.com/siddinenisrinandan-cloud/chem-agent-lab.git
 cd chem-agent-lab
 pip install -r requirements.txt
 ```
@@ -135,6 +174,27 @@ chem-agent-lab/
 * Week 4–6: Implement Reaction and Tutor agents
 * Week 7–9: Agent communication and orchestration
 * Week 10–12: UI integration and testing
+
+---
+
+## 🔮 Future Scope
+
+* Voice-based AI lab assistant
+* Advanced 3D interactive lab environment
+* Integration with school learning platforms
+* Expansion to physics and biology simulations
+
+---
+
+## 👨‍💻 About Me
+
+**Sri Nandan**
+🎓 Student at SRM University
+💡 Aspiring Freelancer | AI & Software Enthusiast
+
+* Passionate about building AI-driven applications
+* Interested in multi-agent systems and simulation-based learning
+* Currently focused on developing intelligent educational platforms
 
 ---
 
