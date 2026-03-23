@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![GSoC](https://img.shields.io/badge/GSoC-2026-orange)
+![Status](https://img.shields.io/badge/Status-Active-success)
 # 🧪 Chem Agent Lab
 
 🚀 *GSoC 2026 Proposal Project | MoFA Org*
