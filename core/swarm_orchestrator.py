@@ -2,20 +2,18 @@ class SwarmOrchestrator:
     def __init__(self, agents):
         self.agents = agents
 
-    def run_sequential(self, tasks):
-        results = []
-        for task in tasks:
-            result = self.execute(task)
-            results.append(result)
-        return results
-
-    def run_parallel(self, tasks):
-        import asyncio
-        return asyncio.gather(*(self.execute(task) for task in tasks))
-
     async def execute(self, task):
-        # simple routing logic
-        if task["type"] == "reaction":
-            return self.agents["reaction"].run(task)
-        elif task["type"] == "safety":
-            return self.agents["safety"].run(task)
+        task_type = task["type"]
+        data = task["data"]
+
+        if task_type == "reaction":
+            return self.agents["reaction"].run(data)
+
+        elif task_type == "safety":
+            return self.agents["safety"].run(data)
+
+        elif task_type == "tutor":
+            return self.agents["tutor"].run(data)
+
+        else:
+            return {"error": "Unknown task type"}
