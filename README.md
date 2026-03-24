@@ -50,8 +50,8 @@ Chem Agent Lab introduces a **multi-agent AI architecture** where specialized ag
 * Demonstrate agent collaboration in an educational context
 
 ---
-## 🧠 Architecture Diagram
-![Architecture](https://dcdenfkxagtaydgekexj.supabase.co/storage/v1/object/public/generated-images/gemini_create_same_thing_1774380792.png)
+## ⚙️ WorkFLow Diagram
+![WorkFlow](https://dcdenfkxagtaydgekexj.supabase.co/storage/v1/object/public/generated-images/gemini_create_same_thing_1774380792.png)
 
 ## 🤖 System Architecture
 
