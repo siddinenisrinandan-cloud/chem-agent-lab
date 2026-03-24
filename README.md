@@ -15,6 +15,7 @@ Chem Agent Lab is a multi-agent AI system designed to simulate, explain, and gui
 This system is developed as part of Google Summer of Code (GSoC) under MoFA Org, focusing on building scalable and modular AI agent architectures for real-world educational applications.
 
 ---
+> 💡 Goal: Make chemistry learning interactive, explainable, and as intuitive as a real lab experience.
 ## 📚 Documentation
 
 - [System Architecture](./ARCHITECTURE.md)
