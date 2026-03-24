@@ -1,32 +1,27 @@
-# Workflow – Multi-Agent Chemistry AI
+# 🔄 Workflow – Multi-Agent Chemistry AI (Swarm-Oriented)
 
-This document explains how the system processes a user action from start to finish. The goal of this workflow is to ensure that every interaction is safe, accurate, and educational.
+This document explains how the system processes a user action from start to finish. The workflow is designed to ensure that every interaction is safe, accurate, and educational, while also demonstrating structured multi-agent collaboration.
 
-Rather than executing actions directly, the system follows a structured pipeline where each agent contributes a specific part of the solution.
-
----
-
-## Overview
-
-At a high level, the workflow follows this path:
-
-**User Action → API → Orchestrator → Agents → Response**
-
-Each step is designed to validate, compute, and explain the result in a clear and controlled manner.
+Unlike a simple execution pipeline, the system now follows a **Swarm-Oriented Workflow**, where tasks are first analyzed, validated, and then orchestrated across multiple agents.
 
 ---
 
-## Step-by-Step Workflow
+## 🧠 Updated Flow
+
+**User → API → Task Analyzer → HITL → Swarm Orchestrator → Agents → Response**
+
+This enhanced flow introduces task decomposition and controlled execution, aligning with modern orchestration principles.
+
+---
+
+## ⚙️ Step-by-Step Workflow
 
 ### 1. User Action
 
 The process begins when the user performs an action in the virtual lab, such as mixing two chemicals.
 
 Example:
-
 * Mixing **HCl** with **NaOH**
-
-This action is captured by the system and sent as a request.
 
 ---
 
@@ -34,143 +29,99 @@ This action is captured by the system and sent as a request.
 
 The API acts as the entry point of the system.
 
-* Receives user input
-* Converts it into a structured format (JSON)
-* Forwards the request to the Central Orchestrator
-
-This ensures consistency in how data is handled across the system.
+* Receives user input  
+* Converts it into structured JSON format  
+* Sends the request to the processing pipeline  
 
 ---
 
-### 3. Central Orchestrator
+### 3. Task Analysis (Task Analyzer)
 
-The Central Orchestrator is responsible for managing the entire workflow.
+Before execution, the system analyzes the request and breaks it into smaller subtasks.
 
-* Maintains the current experiment state
-* Routes the request to appropriate agents
-* Collects and combines responses
+Example decomposition:
+* Safety validation  
+* Reaction computation  
+* Explanation generation  
 
-It acts as the backbone of the system, ensuring smooth coordination.
+This ensures that each step can be handled independently and efficiently.
 
 ---
 
-### 4. Safety Validation (Safety Agent)
+### 4. Human-in-the-Loop (HITL)
 
-Before any reaction is processed, the Safety Agent validates the input.
+The HITL layer introduces a validation checkpoint.
+
+* Reviews tasks based on risk level  
+* Allows safe tasks to proceed automatically  
+* Blocks or flags risky operations  
+
+This step reflects real-world systems where critical actions require oversight.
+
+---
+
+### 5. Swarm Orchestration (Swarm Orchestrator)
+
+The Swarm Orchestrator coordinates the execution of all tasks.
 
 Responsibilities:
+* Routes tasks to the correct agents  
+* Maintains execution order  
+* Manages communication between agents  
 
-* Check for unsafe or forbidden combinations
-* Ensure the reaction follows valid chemical rules
-* Stop execution if the action is unsafe
-
-If the input is invalid, the system returns a safe explanation instead of proceeding.
-
----
-
-### 5. Reaction Computation (Reaction Agent)
-
-Once validated, the Reaction Agent determines the outcome.
-
-Responsibilities:
-
-* Identify reaction type
-* Compute products
-* Provide additional data (e.g., energy change)
-
-This step ensures scientific correctness.
+Instead of direct execution, the system now behaves like a **coordinated team**, where each agent contributes in a structured manner.
 
 ---
 
-### 6. Explanation Generation (Tutor Agent)
+### 6. Agent Execution
 
-After computing the reaction, the Tutor Agent explains the result.
+Each agent performs its specialized role:
 
-Responsibilities:
+**⚠️ Safety Agent**
+* Validates chemical inputs  
+* Prevents unsafe combinations  
 
-* Describe what happened in simple terms
-* Explain the underlying concept (e.g., neutralization)
-* Provide step-by-step reasoning if needed
+**🧪 Reaction Agent**
+* Determines reaction type  
+* Computes products  
 
-This transforms the system from a simulator into a learning tool.
+**📘 Tutor Agent**
+* Explains the reaction clearly  
+* Provides conceptual understanding  
 
----
+**💡 Hint Agent**
+* Assists users when needed  
 
-### 7. Adaptive Assistance (Hint Agent)
-
-If the user struggles or makes mistakes, the Hint Agent provides guidance.
-
-Types of support:
-
-* Subtle hints
-* Step-by-step suggestions
-* Direct instructions when necessary
-
-This helps users learn without feeling stuck.
+**📊 Progress Agent**
+* Tracks learning progress  
 
 ---
 
-### 8. Progress Tracking (Progress Agent)
+### 7. Response Aggregation
 
-Finally, the system updates the user’s learning progress.
+The system collects outputs from all agents and combines them into a structured response.
 
-Tracks:
-
-* Concepts learned
-* Mistakes and patterns
-* Skill level progression
-
-This enables personalization in future interactions.
+This response includes:
+* Validation status  
+* Reaction results  
+* Explanation  
+* Progress updates  
 
 ---
 
-## Example Workflow (JSON)
+## 🧪 Example Workflow (JSON)
 
-The following example shows how the system processes a reaction internally:
-
-```json id="1v7zpx"
+```json
 {
   "input": {
     "chemical_1": "HCl",
     "chemical_2": "NaOH"
   },
-  "validation": {
-    "status": "valid",
-    "checked_by": "Safety Agent"
-  },
-  "reaction": {
-    "type": "Neutralization",
-    "products": ["NaCl", "H2O"],
-    "energy_change": "-57 kJ/mol"
-  },
-  "explanation": {
-    "agent": "Tutor Agent",
-    "text": "This is a neutralization reaction where an acid reacts with a base to form salt and water."
-  },
-  "progress": {
-    "concept": "Neutralization",
-    "status": "completed"
-  }
+  "tasks": ["safety", "reaction", "tutor"],
+  "results": [
+    { "status": "valid" },
+    { "type": "Neutralization", "products": ["NaCl", "H2O"] },
+    { "explanation": "Acid reacts with base to form salt and water" }
+  ]
 }
 ```
-
-This structured output shows how each agent contributes to the final result in a transparent and organized way.
-
----
-
-## Key Design Principles
-
-The workflow is built on a few important principles:
-
-* **Safety First**: Every action is validated before execution
-* **Modularity**: Each agent handles a single responsibility
-* **Transparency**: All steps are traceable and structured
-* **Educational Focus**: Every result includes an explanation
-
----
-
-## Summary
-
-This workflow ensures that the system behaves in a controlled and meaningful way. Instead of simply producing results, it validates actions, explains outcomes, and adapts to the user’s learning journey.
-
-By combining multiple agents into a coordinated pipeline, the system delivers an experience that is both technically reliable and educationally effective.
