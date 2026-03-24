@@ -1,5 +1,6 @@
 class HITL:
     def require_approval(self, task):
+        # simple logic (you can improve later)
         if task.get("risk") == "high":
-            return False  # simulate waiting for approval
+            return False
         return True
