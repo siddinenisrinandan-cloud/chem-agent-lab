@@ -16,13 +16,14 @@ This system is developed as part of Google Summer of Code (GSoC) under MoFA Org,
 
 ---
 > 💡 Goal: Make chemistry learning interactive, explainable, and as intuitive as a real lab experience.
+---
 ## 📚 Documentation
 
 - [System Architecture](./ARCHITECTURE.md)
 - [Workflow](/workflow.md)
 - [Future Enhancements](./FUTURE_ENHANCEMENTS.md)
 - [Why MOFA](./MOFA.md)
-
+---
 ## ❗ Problem Statement
 
 Traditional virtual labs lack:
