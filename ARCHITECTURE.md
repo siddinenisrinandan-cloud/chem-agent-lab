@@ -1,38 +1,61 @@
 ## 🧠 Swarm Orchestration Layer (New)
 
-The system now includes a **Swarm Orchestration layer** that coordinates task decomposition, validation, and multi-agent execution. This layer extends the original architecture by introducing a more structured and intelligent way for agents to collaborate, moving from simple coordination to **orchestrated swarm behavior**.
+The system now has a **Swarm Orchestration layer**. This layer helps coordinate tasks checks if they are valid and makes sure many agents work together well. It makes the original system better by helping agents work together in a way. Now agents do not just work together simply they work together in a way.
 
-Instead of directly passing user input to agents, the system first analyzes and prepares the task before execution. This makes the workflow more modular, scalable, and aligned with modern multi-agent system design principles.
+When a user gives input the system does not just send it to agents. First it. Prepares the task. This makes the workflow better more flexible. Follows modern system design principles.
+
+---
 
 ### 🔄 Updated Flow
 
 User → API → Task Analyzer → HITL → Swarm Orchestrator → Agents → Response
 
+---
+
 ### ⚙️ Key Components
 
-**Task Analyzer**  
-Breaks down a user request into smaller, well-defined subtasks. For example, a single action like mixing chemicals is decomposed into safety validation, reaction computation, and explanation generation. This allows each agent to focus on a specific responsibility.
+**Task Analyzer**
 
-**HITL (Human-in-the-Loop)**  
-Adds a validation layer where certain actions can be reviewed before execution. While currently implemented in a simplified form, this component represents how real-world systems introduce control and safety for critical operations.
+It breaks down a user request into tasks. For example mixing chemicals is broken down into checking safety, computing reactions. Explaining results. Each agent then has a job.
 
-**Swarm Orchestrator**  
-Acts as the central coordination engine. It receives decomposed tasks and dynamically routes them to the appropriate agents. It also ensures that tasks are executed in the correct order and manages the overall flow of information between components.
+---
 
-**Agents**  
-Each agent performs a specialized role:
-- Safety Agent validates inputs  
-- Reaction Agent computes chemical outcomes  
-- Tutor Agent explains results  
-- Hint and Progress Agents support learning and adaptation  
+**HITL (Human-in-the-Loop)**
+
+This adds a layer where some actions can be checked before they are done. It helps make sure critical operations are safe and under control.
+
+---
+
+**Swarm Orchestrator**
+
+It is like a manager. It gets the broken-down tasks. Sends them to the right agents. It makes sure tasks are done in the order and manages information flow.
+
+
+---
+**Agents**
+
+Each agent has a job:
+
+- **Safety Agent** checks inputs
+
+- **Reaction Agent** computes chemical outcomes
+
+- **Tutor Agent** explains results
+
+- **Hint and Progress Agents** help with learning and adaptation
+
+---
 
 ### 🧩 How This Improves the System
 
-With the introduction of the Swarm Orchestration layer:
+With the **Swarm Orchestration layer**:
 
-- The system becomes more **modular**, as task decomposition separates concerns clearly  
-- Execution becomes more **structured**, rather than directly invoking agents  
-- The architecture becomes more **scalable**, allowing new agents or workflows to be added easily  
-- It aligns more closely with **MoFA principles**, especially in terms of orchestration, modularity, and agent collaboration  
+- The system becomes more **modular**. Task decomposition makes it clear what each part does.
 
-This enhancement transforms the system from a basic multi-agent pipeline into a **coordinated swarm-based architecture**, where intelligent components work together in a controlled and extensible manner.
+- Execution is more **structured**. It does not just call agents directly.
+
+- The architecture is more **scalable**. New agents or workflows can be added easily.
+
+- It follows **MoFA principles**. It is good, at orchestration, modularity and agent collaboration.
+
+This makes the system change from a multi-agent pipeline to a **coordinated swarm-based architecture**. Intelligent components work together in a controlled way.
