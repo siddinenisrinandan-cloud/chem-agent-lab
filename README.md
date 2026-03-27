@@ -12,17 +12,17 @@
 
 ## 📌 Overview
 
-**Chem Agent Lab** is a multi-agent AI system designed to simulate, explain, and guide interactive chemistry experiments. Instead of acting as a static virtual lab, the platform behaves like an intelligent assistant that helps users understand **what happens in a reaction and why it happens**.
+Chem Agent Lab isn’t just another virtual chemistry lab. It’s more like a team of smart assistants ready to walk you through experiments — showing you what’s actually happening in a reaction, and more importantly, why it’s happening.
 
-The system combines **chemical reaction simulation**, **AI-driven explanations**, and **collaborative agent orchestration** to create an interactive learning environment. Multiple specialized AI agents work together to analyze inputs, validate experiments, compute results, and explain the science behind them.
+Here’s the cool part: the system combines real-time reaction simulations, clear AI explanations, and a variety of specialized agents that handle different aspects of the process. These agents don’t work alone — they bounce ideas off each other, check your inputs, crunch the numbers, and break down the science in plain language.
 
-This project is being developed as part of **Google Summer of Code (GSoC) 2026 under MoFA**, with the goal of demonstrating how **multi-agent architectures can support real educational applications**.
+The project is part of Google Summer of Code 2026 with MoFA. The main idea? Prove that multi-agent AI systems aren’t just buzzwords — they can actually make learning real subjects, like chemistry, a hands-on experience.
 
-> 💡 **Goal:** Make chemistry learning interactive, explainable, and as intuitive as performing experiments in a real laboratory.
+Goal: Make chemistry interactive, easy to understand, and just as engaging as messing around with beakers in a real lab.
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 * [System Architecture](./ARCHITECTURE.md)
 * [Workflow](./workflow.md)
@@ -31,39 +31,28 @@ This project is being developed as part of **Google Summer of Code (GSoC) 2026 u
 
 ---
 
-## ❗ Problem Statement
+##  Problem Statement
 
-Many existing virtual chemistry labs focus primarily on simulation, but they often lack deeper learning support. Common limitations include:
-
-* No real-time intelligent guidance
-* Little explanation of **why reactions occur**
-* No adaptive feedback based on student progress
-
-Because of this, students often perform experiments **without truly understanding the concepts behind them**.
+Many current virtual chemistry labs mainly focus on simulation, but they often do not provide enough support for deeper learning. Common limitations include: * No real-time intelligent guidance. * Little explanation of why reactions occur. * No adaptive feedback based on student progress. As a result, students often conduct experiments without fully understanding the concepts behind them.
 
 ---
 
-## 💡 Solution
+##  Solution
 
-Chem Agent Lab addresses this problem by introducing a **collaborative multi-agent AI architecture**.
-
-Instead of a single system handling everything, multiple specialized agents work together to:
-
-* Validate experiments
-* Predict chemical reactions
-* Explain results in simple language
-* Guide learners through the process
-
-This transforms virtual experiments into **interactive, concept-driven learning experiences**.
+Chem Agent Lab tackles this issue by introducing a collaborative multi-agent AI structure. Rather than relying on a single system to do all the work, several specialized agents join forces to: * Validate experiments * Predict chemical reactions * Explain results in simple language * Guide learners through the process This changes virtual experiments into interactive, concept-driven learning experiences.
 
 ---
 
 ## 🎯 Objectives
 
-* Build a **multi-agent system for chemistry simulation**
-* Provide **real-time explanations of chemical reactions**
-* Enable **adaptive learning through AI-driven feedback**
-* Demonstrate **agent collaboration in an educational environment**
+Build a **multi-agent system for chemistry simulation**
+
+Provide **real-time explanations of chemical reactions**
+
+Enable **learning through AI-driven feedback**
+
+show **agent collaboration in an educational environment**
+
 
 ---
 
@@ -73,34 +62,32 @@ This transforms virtual experiments into **interactive, concept-driven learning 
 
 ---
 
-## 🤖 System Architecture
+🤖 System Architecture
 
-The platform is built around a set of **specialized AI agents**, each responsible for a specific role.
+The platform brings together a team of AI agents, each with its own unique job.
 
-### 🧪 Reaction Agent
+🧪 Reaction Agent
 
-* Predicts the outcomes of chemical reactions
+* Figures out what happens when chemicals react with each other.
 * Uses rule-based logic and chemical datasets
 
-### 📘 Tutor Agent
+📘 Tutor Agent
 
 * Explains reactions in clear, natural language
 * Helps users understand the underlying concepts
 
-### ⚠️ Safety Agent
+### Safety Agent
 
-* Validates chemical combinations
-* Prevents incorrect or unsafe inputs
+* Validates chemical combinations.
+* Prevents incorrect or unsafe inputs.
+### Hint Agent
 
-### 💡 Hint Agent
+* Gives contextual hints during experiments.
+*  Helps users when they run into problems.
+### Progress Agent 
 
-* Provides contextual hints during experiments
-* Assists users when they encounter difficulties
-
-### 📊 Progress Agent
-
-* Tracks user learning progress
-* Adapts difficulty and guidance accordingly
+* Tracks user learning progress.
+* Adjusts difficulty and guidance as needed.
 
 ---
 
@@ -143,14 +130,13 @@ The orchestrator manages communication between agents, ensuring tasks are execut
 
 ---
 
-## 🔄 Workflow
-
-1. User performs an action (e.g., mixing chemicals)
-2. Safety Agent validates the input
-3. Reaction Agent computes the result
-4. Tutor Agent explains the reaction
-5. Hint Agent assists if needed
-6. Progress Agent updates the learning state
+## Workflow 
+1. User performs an action (for example, mixing chemicals).
+2. Safety Agent checks the input.
+3. Reaction Agent calculates the result.
+4. Tutor Agent explains the reaction.
+5. Hint Agent provides help if needed.
+6. Progress Agent updates the learning state.
 
 ---
 
@@ -177,26 +163,24 @@ The orchestrator manages communication between agents, ensuring tasks are execut
 
 ---
 
-## 📦 Features
+## Features
 
-* Multi-agent collaboration
-* Swarm orchestration system
-* Real-time chemical simulation
-* Natural language explanations
-* Adaptive learning support
-* Modular and extensible architecture
+- Work with multiple agents at once
+- Coordinate tasks through a powerful swarm system
+- Run chemical simulations in real time
+- Get explanations in plain English
+- Adaptive learning that grows with you
+- Built to be modular—easy to expand or customize
 
----
+## Getting Started
 
-## 🚀 Getting Started
+### What you need
 
-### Prerequisites
+- Python 3.10 or newer
+- Node.js if you want to use the frontend
+- Unity, but only if you need it—it's optional
 
-* Python 3.10+
-* Node.js (for frontend)
-* Unity (optional)
-
-### Installation
+## How to install
 
 ```bash
 git clone https://github.com/siddinenisrinandan-cloud/chem-agent-lab.git
@@ -215,83 +199,42 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 📂 Project Structure
+## Here’s how the chem-agent-lab project is organized:
 
-chem-agent-lab/
-│
-├── agents/
-│   ├── reaction_agent.py
-│   ├── tutor_agent.py
-│   ├── safety_agent.py
-│   ├── hint_agent.py
-│   └── progress_agent.py
-│
-├── core/
-│   ├── orchestrator.py
-│   ├── swarm_orchestrator.py
-│   ├── task_analyzer.py
-│   └── hitl.py
-│
-├── api/
-│   └── routes.py
-│
-├── data/
-│   └── chemical_db.json
-│
-├── main.py
-└── requirements.txt
+Everything starts in the main folder. Inside, you’ll find a bunch of folders:
+
+- The “agents” folder holds different Python files, each one dedicated to a specific agent—reaction_agent, tutor_agent, safety_agent, hint_agent, and progress_agent. They all focus on their own tasks.
+- “core” is where you’ll find the backbone of the system. There are orchestrator and swarm_orchestrator files (to manage agent interactions), task_analyzer (handles task logic), and hitl (human-in-the-loop stuff).
+- The “api” folder has routes.py, which handles the API endpoints.
+- “data” contains chemical_db.json, the database for chemical info.
+
+Outside the folders, you have main.py, the entry point for running the app, and requirements.txt, which lists all the dependencies you need.
 
 ---
 
-## 📈 Roadmap (GSoC Timeline)
+## Roadmap (GSoC Timeline)
 
-**Weeks 1–3**
-Project setup and base agent structure
+Weeks 1–3: Set up the project and lay the groundwork for the main agent.
 
-**Weeks 4–6**
-Implement Reaction and Tutor agents
+Weeks 4–6: Build the Reaction and Tutor agents.
 
-**Weeks 7–9**
-Agent communication and orchestration
+Weeks 7–9: Get agents talking to each other and working together.
 
-**Weeks 10–12**
-UI integration and testing
+Weeks 10–12: Tie everything into the UI and run tests.
 
----
 
-## 🔮 Future Scope
+## Future Scope
 
-* Voice-based AI lab assistant
-* Advanced 3D interactive lab environment
-* Integration with educational platforms
-* Expansion to physics and biology simulations
+- Add a voice-powered AI lab assistant
+- Create a detailed 3D interactive lab
+- Connect the system with popular educational platforms
+- Bring in physics and biology simulations to expand beyond chemistry
 
 ---
+## About ME 
 
-## 👨‍💻 About Me
-
-**Sri Nandan**
-🎓 Student at SRM University
-💡 Aspiring Freelancer | AI & Software Enthusiast
-
-* Interested in multi-agent systems
-* Passionate about AI-powered education
-* Focused on building interactive learning platforms
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome. Feel free to open issues or submit pull requests.
-
----
-
-## 📄 License
-
-This project is open-source under the MIT License.
-
----
+Hey, I’m Sri Nandan from SRM University. AI? That’s my jam. I spend most of my free time building software projects—especially ones where AI twists the usual ways people learn. Lately, I’ve been obsessed with multi-agent systems and interactive learning tools. That’s basically my life right now.
 
 ## 🌟 Acknowledgment
 
-Developed as part of **Google Summer of Code (GSoC) 2026 under MoFA**, focusing on building scalable and modular multi-agent systems for education.
+If you want to get involved, just open an issue or send a pull request. I’d love to hear your thoughts or see your ideas in action. Everything here’s open source with the MIT License. Massive thanks to Google Summer of Code 2026 and MoFA—they got this project going. I dove into designing scalable, modular multi-agent platforms for education, and honestly, I haven’t looked back.
