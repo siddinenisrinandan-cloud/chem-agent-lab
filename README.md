@@ -66,12 +66,12 @@ show **agent collaboration in an educational environment**
 
 The platform brings together a team of AI agents, each with its own unique job.
 
-🧪 Reaction Agent
+###Reaction Agent
 
 * Figures out what happens when chemicals react with each other.
 * Uses rule-based logic and chemical datasets
 
-📘 Tutor Agent
+###Tutor Agent
 
 * Explains reactions in clear, natural language
 * Helps users understand the underlying concepts
@@ -235,6 +235,6 @@ Weeks 10–12: Tie everything into the UI and run tests.
 
 Hey, I’m Sri Nandan from SRM University. AI? That’s my jam. I spend most of my free time building software projects—especially ones where AI twists the usual ways people learn. Lately, I’ve been obsessed with multi-agent systems and interactive learning tools. That’s basically my life right now.
 
-## 🌟 Acknowledgment
+##  Acknowledgment
 
 If you want to get involved, just open an issue or send a pull request. I’d love to hear your thoughts or see your ideas in action. Everything here’s open source with the MIT License. Massive thanks to Google Summer of Code 2026 and MoFA—they got this project going. I dove into designing scalable, modular multi-agent platforms for education, and honestly, I haven’t looked back.
