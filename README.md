@@ -62,16 +62,16 @@ show **agent collaboration in an educational environment**
 
 ---
 
-🤖 System Architecture
+## 🤖 System Architecture
 
 The platform brings together a team of AI agents, each with its own unique job.
 
-###Reaction Agent
-
+### Reaction Agent
+ 
 * Figures out what happens when chemicals react with each other.
 * Uses rule-based logic and chemical datasets
 
-###Tutor Agent
+### Tutor Agent
 
 * Explains reactions in clear, natural language
 * Helps users understand the underlying concepts
