@@ -120,10 +120,15 @@ User → API → Task Analyzer → HITL → Swarm Orchestrator → Agents
 ### 🔬 Agent Collaboration
 
 User → API → Orchestrator → Agents
+
 ├── Reaction Agent
+
 ├── Safety Agent
+
 ├── Tutor Agent
+
 ├── Hint Agent
+
 └── Progress Agent
 
 The orchestrator manages communication between agents, ensuring tasks are executed in the correct order while keeping the system modular and scalable.
